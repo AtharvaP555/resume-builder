@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- FORM PANEL -->
+
+      <div class="form-panel">
+        <div class="form-panel-inner">
+          <div class="brand">
+            <span class="brand-mark">R</span>
+            <div class="brand-text">
+              <span class="brand-title">Resume</span>
+              <span class="brand-sub">Builder</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="field-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Jane Doe" />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label>Email</label>
+              <input type="text" id="email" placeholder="jane@example.com" />
+            </div>
+
+            <div class="field-group">
+              <label>Phone</label>
+              <input type="text" id="phone" placeholder="+1 555 000 0000" />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>LinkedIn</label>
+            <input
+              type="text"
+              id="linkedin"
+              placeholder="linkedin.com/in/janedoe"
+            />
+          </div>
+
+          <div class="section-block">
+            <div class="section-header">
+              <span class="section-label">Education</span>
+              <button id="add-education" class="add-btn">+</button>
+            </div>
+
+            <div id="education-container">
+              <input
+                type="text"
+                placeholder="BSc Computer Science — MIT — 2022"
+              />
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="section-header">
+              <span class="section-label">Experience</span>
+              <button id="add-experience" class="add-btn">+</button>
+            </div>
+
+            <div id="experience-container">
+              <input
+                type="text"
+                placeholder="Software Engineer — Acme Corp — Built APIs"
+              />
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="section-header">
+              <span class="section-label">Skills</span>
+              <button id="add-skill" class="add-btn">+</button>
+            </div>
+
+            <div id="skills-container">
+              <input type="text" placeholder="TypeScript" />
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button id="generate-btn" class="generate">Generate</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREVIEW PANEL -->
+
+      <div class="preview-panel">
+        <div class="preview-label">LIVE PREVIEW</div>
+
+        <div id="resume">
+          <div class="resume-header">
+            <h2 id="preview-name">Your Name</h2>
+            <p id="preview-contact">Email · Phone · LinkedIn</p>
+          </div>
+
+          <div class="section">
+            <h3><span>Education</span></h3>
+            <ul id="preview-education">
+              <li class="placeholder-item">Your education will appear here</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3><span>Experience</span></h3>
+            <ul id="preview-experience">
+              <li class="placeholder-item">Your experience will appear here</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3><span>Skills</span></h3>
+            <ul id="preview-skills" class="skills-list">
+              <li class="placeholder-item">Your skills will appear here</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
